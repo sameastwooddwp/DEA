@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="check-list">Back</a>
+
+      <h1 class="heading-large">
+        Upload your payment information
+      </h1>
+      <p>Upload one file at a time, you will be able to add another file later</p>
+
+      <form class="form" action="payment-date-3" method="post">
+
+        <div class="form-group">
+          <label class="form-label visuallyhidden" for="file-input">
+            Upload file
+          </label>
+          <input type="file" name="uploaded-file-3" id="selectedFile" style="display: none;" class="js-upload" />
+          <a class="button button-secondary" onclick="document.getElementById('selectedFile').click();">Choose file</a>
+        </div>
+
+        <p class="js-upload_filename" style="display: none"></p>
+
+        <div class="panel panel-border-wide">
+          <p>You are able to upload payment shedule document. </p>
+          <ul class="list list-bullet">
+            <li>Please enure that you do not exceed the 4MB file size limit</li>
+            <li>You are able to upload single or mutliple files at once</li>
+            <li>Accepted file types, Excel, CSV, Word, XML, HTML</li>
+          </uL>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

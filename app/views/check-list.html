@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <a class="link-back" href="bank-details">Back</a>
+  <div class="grid-row">
+    <div class="column-full">
+      <div class="flash-card">
+        <header>
+          <h1 class="heading-large">Before you continue</h1>
+        </header>
+        <div class="grid-row">
+          <div class="column-two-thirds">
+            <p class="lede">Your shedule should contain the following items, and nothing more.</p>
+            <h2 class="heading-medium">
+              Check you have included:
+            </h2>
+            <ol class="list list-number">
+              <li>
+                  employee name
+              </li>
+              <li>
+                  National Insurance number
+              </li>
+              <li>
+                  amount deducted from each employee
+              </li>
+            </ol>
+            <a class="button" href="upload" role="button">Continue</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

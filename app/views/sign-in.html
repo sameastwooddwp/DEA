@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="breadcrumbs">
+    <ol>
+      <li><a href="https://www.gov.uk">Home</a></li>
+      <li><a href="start-page">Send direct earnings attachment schedule</a></li>
+      <li>Sign in</li>
+    </ol>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+      Sign in
+      </h1>
+
+
+      <form class="form" action="/url/of/next/page" method="post">
+    <p>
+        <label class="form-label" for="full-name-f1">User ID</label>
+        <input class="form-control" id="full-name-f1" type="text" name="full-name-f1">
+    </p>
+    <p>
+        <label class="form-label" for="full-name-f1">Password</label>
+        <input class="form-control" id="full-name-f1" type="text" name="full-name-f1">
+    </p>
+
+        <p>
+          <a class="button" href="business-name" role="button">Sign in</a>
+        </p>
+
+      </form>
+
+      <h2 class="heading-medium">Problems signing in</h2>
+        <ul class="list">
+          <li><a href="#0">Forgotten password</a></li>
+          <li><a href="#0">Forgotten user ID</a></li>
+          <li><a href="register">Need to create an account</a></li>
+        </ul>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

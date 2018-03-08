@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Start page example
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="breadcrumbs">
+    <ol>
+      <li><a href="https://www.gov.uk">Home</a></li>
+      <li>Send direct earnings attachment schedule</li>
+    </ol>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        {% if serviceName %} {{ serviceName }} {% endif %}
+      </h1>
+
+      <p>This safe and secure service is for sending direct earnings attachement schedules to the Department for Work and Pensions (DWP). Only use this service if you make one payment covering more than one deduction.</p>
+
+  <h2 class="heading-medium">Before you start</h2>
+    <p>You'll need a schedule saved in one of the following, Excel, CSV, Word, XML HTML. The schedule must only contain:</p>
+      <ul class="list list-bullet">
+        <li>Employee names</li>
+        <li>National insurance numbers</li>
+        <li>Amount deducted from each employee</li>
+      </uL>
+      <p>
+        <a class="button button-start" href="business-name" role="button">Start</a>
+      </p>
+<br>
+      <div class="notice">
+        <i class="icon icon-information">
+          <span class="visually-hidden">Warning</span>
+        </i>
+        <strong class="bold-small">
+          If you make one pament per employee you do not need to send a schedule
+        </strong>
+      </div>
+
+    </div>
+    <div class="column-third">
+
+
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}
