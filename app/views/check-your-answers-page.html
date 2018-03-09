@@ -51,6 +51,7 @@
               </dd>
             </div>
             {% endif %}
+
             {% if data['uploaded-file-3'] %}
             <div>
               <dd class="cya-answer">
@@ -69,6 +70,26 @@
               </dd>
             </div>
             {% endif %}
+
+            {% if data['uploaded-file-4'] %}
+            <div>
+              <dd class="cya-answer">
+                <!-- {{ data['taskRendered'] | safe }} -->
+                {{ data['uploaded-file-4'] }}
+              </dd>
+              <dd class="cya-answer">
+                {{ data['payment-day-4'] }}
+                {{ data['payment-month-4'] }}
+                {{ data['payment-year-4'] }}
+              </dd>
+              <dd class="cya-change">
+                <a href="#0">
+                  Delete
+                </a>
+              </dd>
+            </div>
+            {% endif %}
+
           </dl>
           <p class="mt-15 mb-30">
             {% if data['uploaded-file-3'] %}
@@ -81,7 +102,7 @@
           </p>
 
       <div class="form-group">
-        <a href="confirmation-page" class="button">Send</a>
+        <a href="confirmation-page" class="button">Send and complete</a>
       </div>
 
     </div>
