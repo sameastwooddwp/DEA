@@ -1,4 +1,5 @@
 {% extends "govuk_template.html" %}
+{% import "./macros.html" as m with context %}
 
 {% block head %}
   {% include "includes/head.html" %}
@@ -30,6 +31,10 @@
     </div>
   </div>
 
+{% endblock %}
+
+{% block page_title %}
+  Prototype: {{ serviceName }}
 {% endblock %}
 
 {% block header_class %}
