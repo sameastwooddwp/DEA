@@ -4,7 +4,7 @@
 
 <main id="content" role="main">
   <a class="link-back" href="business-name">Back</a>
-  
+
   <div class="grid-row">
     <div class="column-two-thirds">
       {{m.errors(errors)}}
@@ -16,11 +16,11 @@
 
       <form class="form" action="bank-details" method="post">
 
-        {{m.govukTextInput('contact-name', 'Full name', errors['contact-name'].message)}}
+        {{m.govukTextInput('contact-name', 'Full name', false, errors['contact-name'].message)}}
 
-        {{m.govukTextInput('email', 'Email address', errors['email'].message)}}
+        {{m.govukTextInput('email', 'Email address', false, errors['email'].message)}}
 
-        {{m.govukTextInput('phone', 'Phone number', errors['phone'].message)}}
+        {{m.govukTextInput('phone', 'Phone number', fasle,  errors['phone'].message)}}
 
         <div class="form-group">
           <input type="submit" class="button" value="Continue">

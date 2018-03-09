@@ -47,6 +47,19 @@ function checkSortCode (input) {
   return 'Enter a valid sort code'
 }
 
+function checkEmail (input) {
+  const regex = new RegExp(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/)
+  const valid = regex.test(input)
+  if (valid) {
+    return false
+  }
+  return 'Enter a valid email address'
+}
 
 
-module.exports = {checkErrors, checkBlank, checkAccountNumber, checkBusinessName, checkSortCode}
+
+
+
+
+
+module.exports = {checkErrors, checkBlank, checkAccountNumber, checkBusinessName, checkSortCode, checkEmail}

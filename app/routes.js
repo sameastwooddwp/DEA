@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const {checkErrors, checkBlank, checkAccountNumber, checkBusinessName, checkSortCode} = require('./functions')
+const {checkErrors, checkBlank, checkAccountNumber, checkBusinessName, checkSortCode, checkEmail} = require('./functions')
 
 router.use((req, res, next) => {
   delete req.session.data.errors
@@ -12,30 +12,9 @@ router.get('/', function (req, res) {
   res.render('index')
 })
 
-router.post('/craigsexample', function (req, res) {
-  validateFields(
-    isNotBlank(req, 'name'),
-    isValidNino(req, 'nino')
-  )
-  .then(() => {
-    res.redirect('/ok')
-  })
-  .catch(() => {
-    res.redirect('/')
-  })
-})
 
-// router.post('/check-list', function (req, res) {
-//   validateFields(
-//     isValidAccountNumber(req, 'account-number')
-//   )
-//   .then(() => {
-//     res.redirect('/check-list')
-//   })
-//   .catch(() => {
-//     res.redirect('/bank-details')
-//   })
-// })
+
+
 
 router.post('/check-list', (req, res) => {
   const errors = {
@@ -76,6 +55,36 @@ router.post('/contact-details', (req, res) => {
   })
   .catch(errors => {
     res.render('business-name', {errors})
+  })
+})
+
+
+
+
+
+
+router.post('/bank-details', (req, res) => {
+  const errors = {
+    'contact-name': {
+      label: 'Full name',
+      message: checkBlank(req.body['contact-name'])
+    },
+    'email': {
+      label: 'Email address',
+      message: checkBlank(req.body['email']) || checkEmail(req.body['email'])
+    },
+    'phone': {
+      label: 'Phone number',
+      message: checkBlank(req.body['phone'])
+    }
+  }
+
+  checkErrors(errors)
+  .then(() => {
+    res.redirect('/bank-details')
+  })
+  .catch(errors => {
+    res.render('contact-details', {errors})
   })
 })
 
