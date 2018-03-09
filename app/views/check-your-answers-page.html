@@ -38,9 +38,9 @@
           </dd>
           <dd class="cya-change">
             <a href="#0">
-                  Delete
-                </a>
-</dd>
+              Delete
+            </a>
+          </dd>
         </div>
         {% endif %}
 
@@ -55,6 +55,23 @@
           </dd>
           <dd class="cya-change">
             <a href="#0">
+              Delete
+            </a>
+          </dd>
+        </div>
+        {% endif %}
+
+        {% if data['uploaded-file-4'] %}
+        <div>
+          <dd class="cya-answer">
+            <!-- {{ data['taskRendered'] | safe }} -->
+            {{ data['uploaded-file-4'] }}
+          </dd>
+          <dd class="cya-answer">
+            {{ data['payment-day-4'] }} {{ data['payment-month-4'] }} {{ data['payment-year-4'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="#0">
                   Delete
                 </a>
           </dd>
@@ -63,10 +80,15 @@
 
       </dl>
       <p>
-        {% if data['uploaded-file-3'] %}
-        <a href="#0">Upload another payment shedule</a> {% elif data['uploaded-file-2'] %}
-        <a href="upload-3">Upload another payment shedule</a> {% else %}
-        <a href="upload-2">Upload another payment shedule</a> {% endif %}
+        {% if data['uploaded-file-4'] %}
+        <a href="#0">Upload another payment shedule</a>
+        {% elif data['uploaded-file-3'] %}
+        <a href="upload-4">Upload another payment shedule</a>
+        {% elif data['uploaded-file-2'] %}
+        <a href="upload-3">Upload another payment shedule</a>
+        {% else %}
+        <a href="upload-2">Upload another payment shedule</a>
+        {% endif %}
       </p>
 
       <div class="form-group">
