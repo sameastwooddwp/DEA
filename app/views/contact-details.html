@@ -1,45 +1,29 @@
 {% extends "layout.html" %}
 
-{% block page_title %}
-  Question page
-{% endblock %}
-
 {% block content %}
 
 <main id="content" role="main">
+  <a class="link-back" href="business-name">Back</a>
+  
   <div class="grid-row">
     <div class="column-two-thirds">
-      <a class="link-back" href="business-name">Back</a>
+      {{m.errors(errors)}}
 
       <h1 class="heading-large">
-        <span class="heading-secondary">Question 2 of 5</span>
-        What are your contact details
+        What are your contact details?
       </h1>
-      <p>Intro copy here.</p>
-      <form class="form" action="/url/of/next/page" method="post">
+      <!-- <p>Intro copy here.</p> -->
 
-      <div class="form-group">
-        <label class="form-label-bold" for="full-name-f1">Contact name</label>
-        <span class="form-hint">
-   Please enter your first and last name
- </span>
-<input class="form-control" id="full-name-f1" type="text" name="full-name-f1">
-      </div>
+      <form class="form" action="bank-details" method="post">
 
-      <div class="form-group">
-        <label class="form-label-bold" for="full-name-f1">Email address</label>
-<input class="form-control" id="full-name-f1" type="text" name="full-name-f1">
-      </div>
+        {{m.govukTextInput('contact-name', 'Full name', errors['contact-name'].message)}}
 
-      <div class="form-group">
-        <label class="form-label-bold" for="full-name-f1">Telephone number</label>
-<input class="form-control" id="full-name-f1" type="text" name="full-name-f1">
-      </div>
+        {{m.govukTextInput('email', 'Email address', errors['email'].message)}}
+
+        {{m.govukTextInput('phone', 'Phone number', errors['phone'].message)}}
 
         <div class="form-group">
-          <p>
-            <a class="button" href="bank-details" role="button">Continue</a>
-          </p>
+          <input type="submit" class="button" value="Continue">
         </div>
 
       </form>

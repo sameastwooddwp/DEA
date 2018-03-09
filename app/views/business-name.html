@@ -1,33 +1,25 @@
 {% extends "layout.html" %}
 
-{% block page_title %}
-  Question page
-{% endblock %}
-
 {% block content %}
 
 <main id="content" role="main">
+  <a class="link-back" href="start-page">Back</a>
+
   <div class="grid-row">
     <div class="column-two-thirds">
+      {{m.errors(errors)}}
 
       <h1 class="heading-large">
-        <span class="heading-secondary">Question 1 of 5</span>
         What is your business name?
       </h1>
-      <p>Intro copy here.</p>
-      <form class="form" action="/url/of/next/page" method="post">
+      <!-- <p>Intro copy here.</p> -->
 
-      <div class="form-group">
-        <label class="form-label-bold" for="full-name-f1">Business name</label>
-        <span class="form-hint">
-   Please enter your companies full name
- </span>
-<input class="form-control" id="full-name-f1" type="text" name="full-name-f1">
-      </div>
+      <form class="form" action="contact-details" method="post">
+
+        {{m.govukTextInput('business-name', 'Business name', 'Please enter your companies full name', errors['business-name'].message)}}
+
         <div class="form-group">
-          <p>
-            <a class="button" href="contact-details" role="button">Continue</a>
-          </p>
+          <input type="submit" class="button" value="Continue">
         </div>
 
       </form>

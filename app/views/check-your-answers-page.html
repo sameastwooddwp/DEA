@@ -1,87 +1,76 @@
 {% extends "layout.html" %}
 
-{% block page_title %}
-  Check your answers
-{% endblock %}
-
 {% block content %}
 
 <main id="content" role="main">
+  <a href="payment-date" class="link-back">Back</a>
+
   <div class="grid-row">
     <div class="column-two-thirds">
-      <a href="payment-date" class="link-back">Back</a>
 
       <h1 class="heading-large">
-        Check your answers before sending your application
+        Check your answers before submitting your application
       </h1>
 
       <dl class="govuk-check-your-answers cya-questions-short">
-            <div>
-              <dd class="cya-answer">
-                {{ data['uploaded-file'] }}
-              </dd>
-              <dd class="cya-answer">
-                {{ data['payment-day'] }}
-                {{ data['payment-month'] }}
-                {{ data['payment-year'] }}
-              </dd>
-              <dd class="cya-change">
-                <a href="#0">
+        <div>
+          <dd class="cya-answer">
+            {{ data['uploaded-file'] }}
+          </dd>
+          <dd class="cya-answer">
+            {{ data['payment-day'] }} {{ data['payment-month'] }} {{ data['payment-year'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="#0">
                   Delete
                 </a>
-              </dd>
-            </div>
+          </dd>
+        </div>
 
+        {% if data['uploaded-file-2'] %}
+        <div>
+          <dd class="cya-answer">
+            <!-- {{ data['taskRendered'] | safe }} -->
+            {{ data['uploaded-file-2'] }}
+          </dd>
+          <dd class="cya-answer">
+            {{ data['payment-day-2'] }} {{ data['payment-month-2'] }} {{ data['payment-year-2'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="#0">
+                  Delete
+                </a>
+          </dd>
+        </div>
+        {% endif %}
 
-            {% if data['uploaded-file-2'] %}
-            <div>
-              <dd class="cya-answer">
-                <!-- {{ data['taskRendered'] | safe }} -->
-                {{ data['uploaded-file-2'] }}
-              </dd>
-              <dd class="cya-answer">
-                {{ data['payment-day-2'] }}
-                {{ data['payment-month-2'] }}
-                {{ data['payment-year-2'] }}
-              </dd>
-              <dd class="cya-change">
-                <a href="#0">
+        {% if data['uploaded-file-3'] %}
+        <div>
+          <dd class="cya-answer">
+            <!-- {{ data['taskRendered'] | safe }} -->
+            {{ data['uploaded-file-3'] }}
+          </dd>
+          <dd class="cya-answer">
+            {{ data['payment-day-3'] }} {{ data['payment-month-3'] }} {{ data['payment-year-3'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="#0">
                   Delete
                 </a>
-              </dd>
-            </div>
-            {% endif %}
-            {% if data['uploaded-file-3'] %}
-            <div>
-              <dd class="cya-answer">
-                <!-- {{ data['taskRendered'] | safe }} -->
-                {{ data['uploaded-file-3'] }}
-              </dd>
-              <dd class="cya-answer">
-                {{ data['payment-day-3'] }}
-                {{ data['payment-month-3'] }}
-                {{ data['payment-year-3'] }}
-              </dd>
-              <dd class="cya-change">
-                <a href="#0">
-                  Delete
-                </a>
-              </dd>
-            </div>
-            {% endif %}
-          </dl>
-          <p class="mt-15 mb-30">
-            {% if data['uploaded-file-3'] %}
-            <a href="#0">Upload another payment shedule</a>
-            {% elif data['uploaded-file-2'] %}
-                <a href="upload-3">Upload another payment shedule</a>
-            {% else %}
-                <a href="upload-2">Upload another payment shedule</a>
-            {% endif %}
-          </p>
+          </dd>
+        </div>
+        {% endif %}
+
+      </dl>
+      <p>
+        {% if data['uploaded-file-3'] %}
+        <a href="#0">Upload another payment shedule</a> {% elif data['uploaded-file-2'] %}
+        <a href="upload-3">Upload another payment shedule</a> {% else %}
+        <a href="upload-2">Upload another payment shedule</a> {% endif %}
+      </p>
 
       <div class="form-group">
-        <a href="confirmation-page" class="button">Send</a>
+        <a href="confirmation-page" class="button">Submit application</a>
       </div>
 
     </div>
