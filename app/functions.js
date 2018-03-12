@@ -21,7 +21,7 @@ function checkBlank (input) {
 }
 
 function checkBusinessName (input) {
-  const regex = new RegExp(/^[a-zA-Z]{1,60}$/)
+  const regex = new RegExp(/^.{1,60}$/)
   const valid = regex.test(input)
   if (valid) {
     return false
