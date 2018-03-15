@@ -26,7 +26,7 @@ function checkBusinessName (input) {
   if (valid) {
     return false
   }
-  return 'Business names cannot be longer than 60 characters'
+  return 'No longer than 60 characters'
 }
 
 function checkAccountNumber (input) {
