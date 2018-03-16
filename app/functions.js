@@ -39,7 +39,7 @@ function checkAccountNumber (input) {
 }
 
 function checkSortCode (input) {
-  const regex = new RegExp(/(\d{2}-?){2}\d{2}/)
+  const regex = new RegExp(/(\d{2}-? ?){2}\d{2}/)
   const valid = regex.test(input)
   if (valid) {
     return false
