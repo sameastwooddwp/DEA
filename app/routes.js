@@ -44,7 +44,7 @@ router.post('/check-list', (req, res) => {
 router.post('/contact-details', (req, res) => {
   const errors = {
     'business-name': {
-      label: 'Organisation name',
+      label: 'Employer name',
       message: checkBlank(req.body['business-name']) || checkBusinessName(req.body['business-name'])
     }
   }

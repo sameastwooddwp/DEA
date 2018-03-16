@@ -35,7 +35,7 @@ function checkAccountNumber (input) {
   if (valid) {
     return false
   }
-  return 'Enter a valid account number'
+  return 'Must be either 6 or 8 numbers long'
 }
 
 function checkSortCode (input) {

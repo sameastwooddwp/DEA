@@ -16,7 +16,7 @@
 
       <form class="form" action="check-list" method="post">
 
-        {{m.govukTextInput('account-number', 'Account number', 'Must be either 6 or 8 numbers long', errors['account-number'].message)}}
+        {{m.govukTextInput('account-number', 'Account number', errors['account-number'].message)}}
 
         {{m.govukTextInput('sort-code', 'Sort code', false,  errors['sort-code'].message, 'form-control-1-4')}}
 

@@ -10,13 +10,13 @@
       {{m.errors(errors)}}
 
       <h1 class="heading-large">
-        Full name of the organisation this schedule is for
+        Employer this schedule is from
       </h1>
       <!-- <p>Intro copy here.</p> -->
 
       <form class="form" action="contact-details" method="post">
 
-        {{m.govukTextInput('business-name', 'Organisation name', false, errors['business-name'].message)}}
+        {{m.govukTextInput('business-name', 'Employer name', false, errors['business-name'].message)}}
 
         <div class="form-group">
           <input type="submit" class="button" value="Continue">
