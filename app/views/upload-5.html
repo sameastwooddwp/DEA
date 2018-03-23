@@ -19,15 +19,15 @@
       <ol class="task-list">
 
               <li class="task-list-item">
-                <a class="task-name" href="excel-file-2" aria-describedby="eligibility-completed">
+                <a class="task-name" href="excel-file-3" aria-describedby="eligibility-completed">
                   Yourfilename1.csv
                 </a>
                 <strong class="task-completed" id="eligibility-completed">Uploaded</strong>
-                  <a href="upload">Delete</a>
+                <a href="upload">Delete</a>
               </li>
 
               <li class="task-list-item">
-                <a class="task-name" href="excel-file-2" aria-describedby="eligibility-completed">
+                <a class="task-name" href="excel-file-3" aria-describedby="eligibility-completed">
                   Yourfilename2.csv
                 </a>
                 <strong class="task-completed" id="eligibility-completed">Uploaded</strong>
@@ -35,11 +35,19 @@
               </li>
 
               <li class="task-list-item">
-                <a class="task-name" href="excel-file-2" aria-describedby="eligibility-completed">
+                <a class="task-name" href="excel-file-3" aria-describedby="eligibility-completed">
                   Yourfilename3.csv
                 </a>
                 <strong class="task-completed" id="eligibility-completed">Uploaded</strong>
                   <a href="upload-3">Delete</a>
+              </li>
+
+              <li class="task-list-item">
+                <a class="task-name" href="excel-file-3" aria-describedby="eligibility-completed">
+                  Yourfilename4.csv
+                </a>
+                <strong class="task-completed" id="eligibility-completed">Uploaded</strong>
+                  <a href="upload-4">Delete</a>
               </li>
 
 
@@ -49,7 +57,7 @@
 
 
 <p></p>
-      <form class="form" action="upload-5" method="post">
+      <form class="form" action="payment-date" method="post">
 
         <div class="form-group">
           <label class="form-label visuallyhidden" for="file-input">
@@ -67,17 +75,11 @@
         </div>
 
       </form>
-      <form class="form" action="payment-date-3" method="post">
+      <form class="form" action="payment-date-4" method="post">
           <input class="button" type="submit" value="Continue">
       </form>
     </div>
   </div>
 </main>
-
-<script type="text/javascript">
-  document.getElementById("selectedFile").onchange = function(e, i) {
-    window.location.href = "upload-5";
-  }
-</script>
 
 {% endblock %}

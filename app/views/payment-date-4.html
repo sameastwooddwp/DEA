@@ -1,49 +1,180 @@
 {% extends "layout.html" %}
 
-{% block page_title %}
-  Question page
-{% endblock %}
-
 {% block content %}
 
 <main id="content" role="main">
+  <a class="link-back" href="upload">Back</a>
+
   <div class="grid-row">
     <div class="column-two-thirds">
-      <a class="link-back" href="upload">Back</a>
+      {{m.errors(errors)}}
 
       <h1 class="heading-large">
-        What is your payment date for this file?
+        Payment date
       </h1>
-      <p>Intro copy here.</p>
-      <form class="form" action="check-your-answers-page" method="post">
 
-  <div class="form-group">
-    <fieldset>
-      <legend>
-      
-        <span class="form-hint">For example, 31 3 2018</span>
-      </legend>
-      <div class="form-date">
-        <div class="form-group form-group-day">
-          <label class="form-label" for="payment-day">Day</label>
-          <input class="form-control" id="payment-day" name="payment-day-4" type="number" pattern="[0-9]*">
-        </div>
-        <div class="form-group form-group-month">
-          <label class="form-label" for="payment-month">Month</label>
-          <input class="form-control" id="payment-month" name="payment-month-4" type="number" pattern="[0-9]*">
-        </div>
-        <div class="form-group form-group-year">
-          <label class="form-label" for="payment-year">Year</label>
-          <input class="form-control" id="payment-year" name="payment-year-4" type="number" pattern="[0-9]*">
-        </div>
-      </div>
-    </fieldset>
-  </div>
-  <div class="form-group">
-    <input type="submit" class="button" value="Continue">
-  </div>
-</form>
 
+      <table class="calendar">
+          <thead>
+            <tr>
+              <th colspan="3" aria-labelledby="past-bank-holidays-in-england-and-wales">Payment date for:</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr>
+                <td class="calendar-date">Yourfilename1.csv</td>
+              </tr>
+          </tbody>
+        </table>
+      <p>
+      <form class="form" action="check-your-answers-page-4" method="post">
+
+        <div class="form-group">
+          <fieldset>
+            <legend>
+              <span class="form-hint">
+                For example, 31 3 2018
+              </span>
+            </legend>
+            <div class="form-date">
+              <div class="form-group form-group-day">
+                <label class="form-label" for="payment-day">Day</label>
+                <input class="form-control" id="payment-day" name="payment-day" type="number" pattern="[0-9]*">
+              </div>
+              <div class="form-group form-group-month">
+                <label class="form-label" for="payment-month">Month</label>
+                <input class="form-control" id="payment-month" name="payment-month" type="number" pattern="[0-9]*">
+              </div>
+              <div class="form-group form-group-year">
+                <label class="form-label" for="payment-year">Year</label>
+                <input class="form-control" id="payment-year" name="payment-year" type="number" pattern="[0-9]*">
+              </div>
+            </div>
+          </fieldset>
+
+
+                <p></p>
+                <table class="calendar">
+                    <thead>
+                      <tr>
+                        <th colspan="3" aria-labelledby="past-bank-holidays-in-england-and-wales"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                          <td class="calendar-date">Yourfilename2.csv</td>
+                        </tr>
+                    </tbody>
+                  </table>
+                <p>
+                <form class="form" action="check-your-answers-page-4" method="post">
+
+                  <div class="form-group">
+                    <fieldset>
+                      <legend>
+
+                      </legend>
+                      <div class="form-date">
+                        <div class="form-group form-group-day">
+                          <label class="form-label" for="payment-day">Day</label>
+                          <input class="form-control" id="payment-day" name="payment-day" type="number" pattern="[0-9]*">
+                        </div>
+                        <div class="form-group form-group-month">
+                          <label class="form-label" for="payment-month">Month</label>
+                          <input class="form-control" id="payment-month" name="payment-month" type="number" pattern="[0-9]*">
+                        </div>
+                        <div class="form-group form-group-year">
+                          <label class="form-label" for="payment-year">Year</label>
+                          <input class="form-control" id="payment-year" name="payment-year" type="number" pattern="[0-9]*">
+                        </div>
+                      </div>
+                    </fieldset>
+
+
+                    <p></p>
+                    <table class="calendar">
+                        <thead>
+                          <tr>
+                            <th colspan="3" aria-labelledby="past-bank-holidays-in-england-and-wales"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                              <td class="calendar-date">Yourfilename3.csv</td>
+                            </tr>
+                        </tbody>
+                      </table>
+                    <p>
+                    <form class="form" action="check-your-answers-page-4" method="post">
+
+                      <div class="form-group">
+                        <fieldset>
+                          <legend>
+
+                          </legend>
+                          <div class="form-date">
+                            <div class="form-group form-group-day">
+                              <label class="form-label" for="payment-day">Day</label>
+                              <input class="form-control" id="payment-day" name="payment-day" type="number" pattern="[0-9]*">
+                            </div>
+                            <div class="form-group form-group-month">
+                              <label class="form-label" for="payment-month">Month</label>
+                              <input class="form-control" id="payment-month" name="payment-month" type="number" pattern="[0-9]*">
+                            </div>
+                            <div class="form-group form-group-year">
+                              <label class="form-label" for="payment-year">Year</label>
+                              <input class="form-control" id="payment-year" name="payment-year" type="number" pattern="[0-9]*">
+                            </div>
+                          </div>
+                        </fieldset>
+
+
+                        <p></p>
+                        <table class="calendar">
+                            <thead>
+                              <tr>
+                                <th colspan="3" aria-labelledby="past-bank-holidays-in-england-and-wales"></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                  <td class="calendar-date">Yourfilename4.csv</td>
+                                </tr>
+                            </tbody>
+                          </table>
+                        <p>
+                        <form class="form" action="check-your-answers-page-4" method="post">
+
+                          <div class="form-group">
+                            <fieldset>
+                              <legend>
+
+                              </legend>
+                              <div class="form-date">
+                                <div class="form-group form-group-day">
+                                  <label class="form-label" for="payment-day">Day</label>
+                                  <input class="form-control" id="payment-day" name="payment-day" type="number" pattern="[0-9]*">
+                                </div>
+                                <div class="form-group form-group-month">
+                                  <label class="form-label" for="payment-month">Month</label>
+                                  <input class="form-control" id="payment-month" name="payment-month" type="number" pattern="[0-9]*">
+                                </div>
+                                <div class="form-group form-group-year">
+                                  <label class="form-label" for="payment-year">Year</label>
+                                  <input class="form-control" id="payment-year" name="payment-year" type="number" pattern="[0-9]*">
+                                </div>
+                              </div>
+                            </fieldset>
+
+
+
+
+        </div>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+      </form>
 
     </div>
   </div>
