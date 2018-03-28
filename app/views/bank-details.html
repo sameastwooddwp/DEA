@@ -11,12 +11,12 @@
 
 
       <h1 class="heading-large">
-        Bank account used for payment
+        Bank account you use to make payments
       </h1>
 
       <form class="form" action="check-list" method="post">
 
-        {{m.govukTextInput('account-number', 'Account number', false, errors['account-number'].message)}}
+        {{m.govukTextInput('account-number', 'Account number', 'We need this so we can match your schedules to your payments', errors['account-number'].message)}}
 
         {{m.govukTextInput('sort-code', 'Sort code', false,  errors['sort-code'].message, 'form-control-1-4')}}
 
