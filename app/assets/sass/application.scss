@@ -90,3 +90,16 @@ $path: "/public/images/";
     padding: 60px;
   }
 }
+
+.form-group-panel {
+  clear: both;
+  border: solid $grey-3 1px;
+  padding: 1.5em;
+  box-sizing: border-box;
+}
+
+.heading-upload {
+  margin-bottom: 0.5em;
+  font-weight: bold;
+font-size: 24px
+}

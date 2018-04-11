@@ -66,7 +66,7 @@ router.post('/contact-details', (req, res) => {
 router.post('/bank-details', (req, res) => {
   const errors = {
     'contact-name': {
-      label: 'Full name',
+      label: 'Name of contact or team',
       message: checkBlank(req.body['contact-name'])
     },
     'email': {

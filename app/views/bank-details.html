@@ -16,7 +16,7 @@
 
       <form class="form" action="check-list" method="post">
 
-        {{m.govukTextInput('account-number', 'Account number', false, errors['account-number'].message)}}
+        {{m.govukTextInput('account-number', 'Account number', 'We need this so we can match your payments to your schedules. We won’t use your bank details for anything else', errors['account-number'].message)}}
 
         {{m.govukTextInput('sort-code', 'Sort code', false,  errors['sort-code'].message, 'form-control-1-4')}}
 

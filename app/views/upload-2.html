@@ -29,35 +29,53 @@
         </ol>
 
 
-<h3 class="heading-medium">Attach another schedule</h3>
-
 <p></p>
-      <form class="form" action="upload-3" method="post">
+<div data-file-upload="" class="form-group-panel">
 
-        <div class="form-group">
-          <label class="form-label visuallyhidden" for="file-input">
-            Upload file
-          </label>
-          <input type="file" name="uploaded-file-2" id="selectedFile" class="js-upload" />
+<h3 class="heading-upload">Attach another schedule</h3>
 
-        </div>
 
-        <p class="js-upload_filename" style="display: none"></p>
+        <form class="form" action="payment-date" method="post">
 
-        <div class="panel panel-border-wide">
-          <p>File size limit: 4MB</p>
-          <p>File types accepted: Excel, CSV, Word, XML, HTML</p>
-        </div>
+          <div class="form-group">
+            <label class="form-label visuallyhidden" for="file-input">
+              Upload file
+            </label>
+            <input type="file" name="uploaded-file-2" id="selectedFile" class="js-upload" />
 
-      </form>
+          </div>
 
-    </form>
+          <p class="js-upload_filename" style="display: none"></p>
+
+          <div class="panel panel-border-wide">
+            <p>File size limit: 4MB</p>
+            <p>File types accepted: Excel, CSV, Word, XML, HTML</p>
+          </div>
+
+        </form>
+</div>
+    <p></p>
+
+    <div class="notice">
+      <i class="icon icon-information">
+        <span class="visually-hidden">Warning</span>
+      </i>
+      <strong class="bold-small">
+        Have you attached all your schedules?
+      </strong>
+    </div>
+  <p></p>
+
     <form class="form" action="payment-date" method="post">
         <input class="button" type="submit" value="Continue">
     </form>
   </div>
 </div>
+
+
 </main>
+
+
 
 <script type="text/javascript">
   document.getElementById("selectedFile").onchange = function(e, i) {

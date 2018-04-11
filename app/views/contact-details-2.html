@@ -3,7 +3,7 @@
 {% block content %}
 
 <main id="content" role="main">
-  <a class="link-back" href="business-name">Back</a>
+  <a class="link-back" href="contact-details">Back</a>
 
   <div class="grid-row">
     <div class="column-two-thirds">
@@ -16,12 +16,26 @@
 
       <form class="form" action="bank-details" method="post">
 
+        <label class="form-label" for="Name of contact or team">
+          Name of contact or team
+        </label>
+        <input class="form-control" type="text" name="Name of contact or team">
 
-        {{m.govukTextInput('contact-name', 'Name of contact or team', false, errors['contact-name'].message)}}
+    <p></p>
 
-        {{m.govukTextInput('email', 'Email address', false, errors['email'].message)}}
+        <label class="form-label" for="Email address">
+          Email address
+        </label>
+        <input class="form-control" type="text" name="Email address">
 
-        {{m.govukTextInput('phone', 'Phone number', fasle,  errors['phone'].message)}}
+    <p></p>
+
+        <label class="form-label" for="Phone number">
+          Phone number
+        </label>
+        <input class="form-control" type="text" name="Phone number">
+
+  <p></p>
 
         <label class="form-label" for="ni-number">
           What queries should we use this contact for? (Optional)
@@ -30,11 +44,9 @@
           </span>
         </label>
         <input class="form-control" id="ni-number" type="text" name="ni-number">
-        <p></p>
 
-        <ul class="list">
-          <li><a href="contact-details-2">Add another optional contact</a></li>
-        </ul>
+  <p></p>
+
 
         <div class="form-group">
           <input type="submit" class="button" value="Continue">
