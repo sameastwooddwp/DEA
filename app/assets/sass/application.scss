@@ -103,3 +103,40 @@ $path: "/public/images/";
   font-weight: bold;
 font-size: 24px
 }
+
+
+.govuk-box-highlight .heading-xlarge {
+  position: relative;
+  padding: 0.25em 0 0 2.2em;
+  text-align: left;
+  display: block;
+  width: 175px;
+  margin: 0 auto;
+}
+
+.govuk-box-highlight .heading-xlarge:before {
+  content: "";
+  display: block;
+  border: solid 0.7em rgba(255, 255, 255, 255);
+  border-radius: .7em;
+  height: 0;
+  width: 0;
+  position: absolute;
+  left: 0.5em;
+  top: 40%;
+  margin-top: -0.5em;
+}
+
+.govuk-box-highlight .heading-xlarge:after {
+  content: "";
+  display: block;
+  width: 0.25em;
+  height: 0.5em;
+  border: solid #30a096;
+  border-width: 0 0.15em 0.15em 0;
+  position: absolute;
+  left: 1em;
+  top: 40%;
+  margin-top: -0.2em;
+  transform: rotate(45deg);
+}
