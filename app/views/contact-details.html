@@ -28,14 +28,26 @@
 
         {{m.govukTextInput('phone', 'Phone number', fasle,  errors['phone'].message)}}
 
-        <label class="form-label" for="ni-number">
-          What queries should we use this contact for? (Optional)
-          <span class="form-hint">
-            For example payment queries or schedule queries
-          </span>
-        </label>
-        <input class="form-control" id="ni-number" type="text" name="ni-number">
-        <p></p>
+
+        <div class="form-group">
+          <fieldset>
+
+            <legend>
+              <span class="body-text">What queries should we use this contact for? (Optional)</span>
+            </legend>
+
+            <div class="multiple-choice">
+              <input id="waste-type-1" name="waste-types" type="checkbox" value="waste-animal">
+              <label for="waste-type-1">Schedule/Deduction</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="waste-type-2" name="waste-types" type="checkbox" value="waste-mines">
+              <label for="waste-type-2">BACS payment</label>
+            </div>
+
+          </fieldset>
+        </div>
+
 
         <ul class="list">
           <li><a href="contact-details-2">Add another contact</a></li>
